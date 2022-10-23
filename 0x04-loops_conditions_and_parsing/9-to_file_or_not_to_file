@@ -1,3 +1,27 @@
 #!/usr/bin//env bash
 # this script gives information about the school file
 
+file=$(ls .)
+flag=0
+for i in $file
+do
+    if [ "$i" == "school" ]
+    then
+        flag=1
+        echo "school file exists"
+        if [ -s "$i" ]
+        then
+            echo "school file is not empty"
+        else
+            echo "school file is empty"
+        fi
+        if [ -f "$i" ]
+        then
+            echo "school is a regular file"
+        fi
+    fi
+done;
+if [ $flag -eq 0 ]
+then
+    echo "school file does not exist"
+fi
