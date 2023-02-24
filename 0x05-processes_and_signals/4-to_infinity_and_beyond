@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays "To infinity and beyon" indefinitely
+
+counter=1
+
+while [ $counter -gt 0 ]
+do
+	echo "To infinity and beyond"
+	(( counter++ ))
+done
