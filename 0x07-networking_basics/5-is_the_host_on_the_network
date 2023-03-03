@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# this scrupt pings the argument passrd to it
+
+arg="$#"
+if [ $arg == 0 ]
+then
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
+
+if [ $arg == 1 ]
+then
+	ping -c 5 "$1"
+fi
